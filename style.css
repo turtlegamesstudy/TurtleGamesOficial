@@ -1,39 +1,54 @@
-/* Tipografía y ajustes base */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+/* Importar fuente futurista */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
+/* Fondo general con imagen desde carpeta IMG */
 body.aqua-theme {
   margin: 0;
+  padding: 0;
   font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(to bottom, #001f3f, #0074D9);
+  background: url('IMG/fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+/* Capa oscura + blur */
+.overlay {
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.5);
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
 }
 
-/* Contenedor del formulario */
+/* Encabezado */
+header {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header h1 {
+  color: aqua;
+  font-size: 36px;
+  margin: 0;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+/* Caja del formulario */
 .form-container {
-  background: rgba(0, 51, 102, 0.6);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
   border-radius: 20px;
-  padding: 30px;
-  width: 320px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  padding: 30px 25px;
+  width: 300px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   text-align: center;
-}
-
-/* Logo */
-.logo {
-  width: 80px;
-  margin-bottom: 15px;
-}
-
-/* Títulos */
-h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
 }
 
 /* Inputs */
@@ -42,38 +57,38 @@ input {
   padding: 12px;
   margin: 10px 0;
   border: none;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
   color: #000;
   font-size: 14px;
 }
 
-/* Botones */
+/* Botón */
 button {
   width: 100%;
   padding: 12px;
   margin-top: 15px;
   border: none;
   border-radius: 10px;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  color: #fff;
+  background: linear-gradient(135deg, aqua, #00c6ff, #00ffcc);
+  color: black;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
+  transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-  background: linear-gradient(135deg, #33ccff, #3399ff);
+  background: linear-gradient(135deg, #33ffcc, #33ccff, #00ff99);
   transform: scale(1.05);
 }
 
 /* Enlaces */
 a {
-  color: #cceeff;
-  text-decoration: underline;
+  color: #00ffff;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #ffffff;
+  color: #66ffff;
 }
