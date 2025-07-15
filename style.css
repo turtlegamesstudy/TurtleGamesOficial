@@ -1,62 +1,64 @@
-/* Importar fuente futurista */
+/* Fuente futurista */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
-/* Fondo general con imagen desde carpeta IMG */
+* {
+  box-sizing: border-box;
+}
+
 body.aqua-theme {
   margin: 0;
   padding: 0;
   font-family: 'Orbitron', sans-serif;
   background: url('IMG/fondo.jpg') no-repeat center center fixed;
   background-size: cover;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
   color: white;
-}
-
-/* Estilo para el logo */
-.logo {
-  height: 40px; /* Ajusta el tamaño según tu imagen */
-  margin-bottom: 10px;
-  filter: drop-shadow(0 0 10px aqua);
-}
-
-
-/* Capa oscura + blur */
-.overlay {
-  backdrop-filter: blur(8px);
-  background: rgba(0, 0, 0, 0.5);
-  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* Encabezado */
+.overlay {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Logo reemplaza al h1 */
 header {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-header h1 {
-  color: aqua;
-  font-size: 36px;
-  margin: 0;
-  text-shadow: 0 0 10px #00ffff;
+.logo {
+  height: 80px;
+  max-width: 100%;
+  filter: drop-shadow(0 0 10px aqua);
 }
 
-/* Caja del formulario */
+/* Contenedor del formulario */
 .form-container {
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(15px);
   border-radius: 20px;
   padding: 30px 25px;
-  width: 300px;
+  width: 100%;
+  max-width: 360px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   text-align: center;
+}
+
+/* Título del formulario */
+.form-container h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: aqua;
+  text-shadow: 0 0 5px #00ffff;
 }
 
 /* Inputs */
@@ -66,9 +68,16 @@ input {
   margin: 10px 0;
   border: none;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #000;
+  background-color: rgba(255, 255, 255, 0.9);
   font-size: 14px;
+  color: black;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  box-shadow: 0 0 8px #00ffff;
+  border: 1px solid aqua;
 }
 
 /* Botón */
@@ -83,7 +92,7 @@ button {
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
 
 button:hover {
@@ -99,4 +108,38 @@ a {
 
 a:hover {
   color: #66ffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-container {
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .form-container h2 {
+    font-size: 20px;
+  }
+
+  input, button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px 15px;
+  }
+
+  .form-container h2 {
+    font-size: 18px;
+  }
+
+  .logo {
+    height: 50px;
+  }
 }
