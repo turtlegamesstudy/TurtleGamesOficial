@@ -41,7 +41,7 @@ header {
 
 .logo {
   height: 20px !important;      /* Fuerza el tamaño */
-  max-height: 20px !important;  /* Evita crecer más */
+  max-height: 40px !important;  /* Evita crecer más */
   width: auto;
   max-width: 100%;
   object-fit: contain;
@@ -126,9 +126,6 @@ a:hover {
     padding: 25px 20px;
   }
 
-  .logo {
-    height: 60px;
-  }
 
   .form-container h2 {
     font-size: 20px;
@@ -148,7 +145,5 @@ a:hover {
     font-size: 18px;
   }
 
-  .logo {
-    height: 50px;
-  }
+
 }
