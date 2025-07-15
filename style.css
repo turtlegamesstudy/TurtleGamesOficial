@@ -37,7 +37,7 @@ header {
 
 .logo {
   height: 20px;
-  max-width: 100%;
+  width: auto;
   filter: drop-shadow(0 0 10px aqua);
 }
 
