@@ -15,7 +15,7 @@ body.aqua-theme {
 
 /* Estilo para el logo */
 .logo {
-  height: 80px; /* Ajusta el tamaño según tu imagen */
+  height: 40px; /* Ajusta el tamaño según tu imagen */
   margin-bottom: 10px;
   filter: drop-shadow(0 0 10px aqua);
 }
