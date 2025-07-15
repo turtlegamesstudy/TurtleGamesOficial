@@ -1,0 +1,79 @@
+/* Tipografía y ajustes base */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body.aqua-theme {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(to bottom, #001f3f, #0074D9);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
+}
+
+/* Contenedor del formulario */
+.form-container {
+  background: rgba(0, 51, 102, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 320px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+/* Títulos */
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  font-size: 14px;
+}
+
+/* Botones */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #33ccff, #3399ff);
+  transform: scale(1.05);
+}
+
+/* Enlaces */
+a {
+  color: #cceeff;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ffffff;
+}
